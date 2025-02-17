@@ -18,7 +18,7 @@ namespace DzEF_1
                 builder.AddJsonFile("appsettings.json");
                 var config = builder.Build();
                 string connectionString = config.GetConnectionString("DefaultConnection");
-
+                 
                 var optionsBuilder = new DbContextOptionsBuilder<CountryContext>();
                 var options = optionsBuilder.UseSqlServer(connectionString).Options;
 
